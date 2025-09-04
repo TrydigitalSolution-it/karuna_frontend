@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  color: #dddde1;
+}
+
+.main_div {
+  margin: auto;
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.logo_div {
+  display: flex;
+  justify-content: center;
+}
+
+.LoginAdmin_Heading {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 64px;
+  text-align: center;
+  font-family: 'Poppins';
+}
+
+.main_form {
+  border: 2px solid black;
+  padding: 32px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #15121182;
+  margin: auto;
+  width: 100%;
+  max-width: 448px;
+  box-sizing: border-box;
+}
+
+.Email_password_input {
+  padding: 16px;
+  width: 100%;
+  background: #151211;
+  border-radius: 16px;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  margin-top: 7px;
+}
+
+.Msg_red {
+  color: red;
+  margin-bottom: 4px;
+  
+}
+
+.Login_button {
+  padding: 14px;
+  border-radius: 16px;
+  width: 100%;
+  margin-bottom: 13px;
+  font-size: 17px;
+  border: none;
+  background-color: #f66f1e;
+  color: white;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.remember_div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.forgot_div {
+  color: #dddde1;
+  margin-top: 3px;
+    text-decoration: none;
+}
+
+.label_Remember {
+  color: #dddde1;
+}
+
+.img {
+  height: auto;
+width: 66px;
+}
+.createAccount_mainDiv {
+  display: flex;
+  flex-direction: column;
+flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+    height: 135px;
+}
+.create-account__text {
+  color: #5a5a5a;
+  font-family: poppins;
+  font-size: 14px;
+}
+.create-account__text span {
+  color: #ffffff;
+  font-weight: 400;
+}
+.create-account__separator {
+  color: #ffffff;
+  font-weight: 400;
+  /* font-family: Overpass; */
+}
+.create-account__socials {
+  width: 42%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.socials_google img{
+  height: auto;
+    width: 47px;
+}
+.socials_Apple img{
+   height: auto;
+    width: 47px;
+}
+
+@media (max-width: 500px) {
+  .main_form {
+    padding: 24px 16px;
+  }
+
+  .Login_button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .LoginAdmin_Heading {
+    font-size: 20px;
+  }
+
+  .img {
+    width: 80px;
+  }
+  .create-account__socials{
+    width: 57%;
+  }
+  .create-account__text{
+    font-size: 12px;
+  }
+  .Msg_red{
+    font-size: 11px;
+  }
+  .Email_password_input{
+        margin-bottom: 6px;
+  }
+}
