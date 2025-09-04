@@ -15,32 +15,24 @@ const Dashboard = () => {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       if(!formdata.email){
         newErrors.email="Email is  required";
-        // console.log(newErrors);
     }
         else if(!emailRegex.test(formdata.email)){
           newErrors.email="Enter a valid Email";
         }
         if(!formdata.password){
             newErrors.password="Password is required";
-            // console.log(newErrors);
         }
             else if(!passwordRegex.test(formdata.password)){
-                newErrors.password="Password must include: Number (0-9) ,Capital letter(A-Z),"
-            
-            
+                newErrors.password="Password must include: Number (0-9) ,Capital letter(A-Z)," 
         }
         Seterrors(newErrors);
  if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted successfully:", formdata);
-      // alert("Form submitted successfully!");
       Setformdata({
         email:"",
         password:""
       })
-      
-    }
-        
-      
+      }
     }
       const handlechange=(e)=>{
         const{name ,value}=e.target;

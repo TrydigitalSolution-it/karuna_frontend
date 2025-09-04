@@ -7,8 +7,6 @@ import {BrowserRouter,Routes, Route} from 'react-router-dom'
 import SigninEmail from './Component/SigninEmail'
 
 function App() {
-  
-
   return (
     <>
     <BrowserRouter>
