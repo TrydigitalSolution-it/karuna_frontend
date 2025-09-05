@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #dddde1;
+  
 }
 
 .main_div {
@@ -113,6 +113,7 @@ flex-wrap: wrap;
 .create-account__text span {
   color: #ffffff;
   font-weight: 400;
+  cursor: pointer;
 }
 .create-account__separator {
   color: #ffffff;
@@ -128,11 +129,77 @@ flex-wrap: wrap;
 .socials_google img{
   height: auto;
     width: 47px;
+    cursor: pointer;
 }
 .socials_Apple img{
    height: auto;
     width: 47px;
+    cursor: pointer;
 }
+.nav_ul_li{
+  list-style: none;
+  
+  margin: 15px;
+  
+}
+.nav_ul_li a{
+  text-decoration: none;
+    color: white;
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+.nav_ul{
+  margin: 0;padding: 0;
+  justify-content: space-evenly;
+    display: flex
+;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    height: 33vh;
+
+}
+.Navbar_nav{
+      
+    width: 247px;
+}
+.nav_logo img{
+      height: auto;
+    width: 60px;
+}
+
+.nav_logo_text{
+ margin-top: 29px;
+    justify-content: space-evenly;
+    display: flex;
+}
+.Nav_logo_text{
+  font-family: poppins;
+    font-size: 21px;
+    align-items: center;
+    justify-content: center;
+    display: flex
+;color: white;
+    text-align: center;
+
+}
+.Navbar{
+ background-color: black;
+  border: 2px  solid#F66F1E;
+  height: 100vh;
+    width: 249px;
+
+  }
+  .nav_li{
+    border-bottom: 1px solid white;
+
+}
+
+.user_main{
+border: 2px  solid black;
+}
+
+
 
 @media (max-width: 500px) {
   .main_form {
