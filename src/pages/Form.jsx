@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import TextInput from '../component/TextInput';
+import Button from '../component/Button';
+import img from "../assets/Icon.svg";
 
 
 const Form = () => {
   
-  
+    const navigate=useNavigate();
     const [formdata, Setformdata] = useState({
       name:"",
     email: "",
@@ -44,6 +48,7 @@ const Form = () => {
         password: "",
       });
     }
+     navigate("/usermanagement")
   };
   const handlechange = (e) => {
     const { name, value } = e.target;
@@ -57,36 +62,35 @@ const Form = () => {
     <div className="main_div">
       <form action="" className="main_form" onSubmit={handleSubmit}>
         <div>
-          <div className="LoginAdmin_Heading">Sign In</div>
+          <div className="LoginAdmin_Heading">User Details</div>
         </div>
         {/* <div className="logo_div"><img  className="img"src={Icon} alt="logo" /> </div> */}
  <div className="Email_input_div">
           <label htmlFor="">Name</label>
-          <input
-            className="Email_password_input"
-            type="text"
-            placeholder="name"
-            name="name"
-            value={formdata.name}
-            onChange={handlechange}
-          />
+        
+         <TextInput 
+           name="email"
+          type="text"
+          value={formdata.email}
+          className="Email_password_input"
+          placeholder="Email"
+          onChange={handlechange}/> 
         </div>
         <div className="Msg_red"> {errors.name}</div>
         <div className="Email_input_div">
-          <label htmlFor="">Email Address</label>
-          <input
-            className="Email_password_input"
-            type="text"
-            placeholder="Email"
-            name="email"
-            value={formdata.email}
-            onChange={handlechange}
-          />
+          <label htmlFor="">Email </label>
+        <TextInput 
+           name="email"
+          type="text"
+          value={formdata.email}
+          className="Email_password_input"
+          placeholder="Email"
+          onChange={handlechange}/> 
         </div>
         <div className="Msg_red"> {errors.email}</div>
         <div className="Password_div">
           <label htmlFor=""> Password</label>
-          <input
+         <TextInput
             className="Email_password_input"
             type="password"
             placeholder="Password"
@@ -98,7 +102,8 @@ const Form = () => {
         <div className="Msg_red"> {errors.password}</div>
         
         <div className="Login_button_div">
-          <button className="Login_button">Save</button>
+          {/* <button className="Login_button">Save</button> */}
+          <Button  className="Login_button" text="Continue" />
         </div>
         
       </form>
@@ -106,4 +111,4 @@ const Form = () => {
   );
 }
 
-export default Form
+export default Form;

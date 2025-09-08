@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  
   box-sizing: border-box;
 }
 
@@ -231,11 +231,34 @@ justify-content: center;
     justify-content: space-evenly;
 }
 
-
-
+.Icon_visibility{
+  width: 100px;
+  height: auto;
+}
+.Icon_img{
+  align-items: center;
+    position: absolute;
+    justify-content: center;
+    display: flex
+;
+    right: 248px;
+   
+}
+.Input_Text{
+  position: relative;
+    width: 402px;
+}
+.password_input{
+  display: flex
+;
+}
+.password_icon{
+  display: flex;
+  width: 403px;
+}
 @media (max-width: 500px) {
   .main_form {
-    padding: 24px 16px;
+    padding: 0px 16px;
   }
 
   .Login_button {
@@ -261,5 +284,8 @@ justify-content: center;
   }
   .Email_password_input{
         margin-bottom: 6px;
+  }
+  .Icon_img{
+
   }
 }
