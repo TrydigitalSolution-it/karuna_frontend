@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SigninEmail = () => {
-  print('data');
+
   return (
     <div className="main_div">
       <form action="" className="main_form" onSubmit={handleSubmit}>

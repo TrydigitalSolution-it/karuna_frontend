@@ -4,7 +4,7 @@ import Icon from "../assets/Icon.svg";
 const DashboardLayout = () => {
     
   return (
-    
+         <div className='Layout_main'>
         
         <div className='Navbar'>
             <div className='nav_logo_text'>  <div className="nav_logo"><img src={Icon} alt="" /></div>
@@ -18,6 +18,7 @@ const DashboardLayout = () => {
            
         </ul>
        </nav>
+       </div>
        <main>
         <Outlet/>
        </main>

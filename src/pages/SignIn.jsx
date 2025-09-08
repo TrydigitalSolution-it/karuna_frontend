@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CreateAccount from "../Component/CreateAccount";
+import CreateAccount from "../component/CreateAccount";
 
 const SignIn = () => {
   const [emaildata, SetEmaildata] = useState({

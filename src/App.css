@@ -27,6 +27,7 @@ body {
   margin-bottom: 64px;
   text-align: center;
   font-family: 'Poppins';
+  color: white;
 }
 
 .main_form {
@@ -41,6 +42,9 @@ body {
   width: 100%;
   max-width: 448px;
   box-sizing: border-box;
+}
+.main_form label{
+  color: white;
 }
 
 .Email_password_input {
@@ -196,7 +200,35 @@ flex-wrap: wrap;
 }
 
 .user_main{
-border: 2px  solid black;
+justify-content: center;
+    display: flex
+;
+    height: 50vh;
+    border: 2px solid orange;
+}
+.Layout_main{
+ display: flex;
+
+}
+.usermanagement{
+  border: 2px  solid;
+  height :100vh;
+  width: 80vw;
+}
+
+.text_nav{
+      justify-content: space-between;
+    
+    display: flex
+;
+    
+    border: 2px solid orange;
+}
+.search_add_fields{
+  width: 252px;
+    display: flex
+;
+    justify-content: space-evenly;
 }
 
 
