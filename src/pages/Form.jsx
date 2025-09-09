@@ -47,8 +47,10 @@ const Form = () => {
         email: "",
         password: "",
       });
+      navigate("/usermanagement")
     }
-     navigate("/usermanagement")
+
+     
   };
   const handlechange = (e) => {
     const { name, value } = e.target;
@@ -69,11 +71,11 @@ const Form = () => {
           <label htmlFor="">Name</label>
         
          <TextInput 
-           name="email"
+           name="name"
           type="text"
-          value={formdata.email}
+          value={formdata.name}
           className="Email_password_input"
-          placeholder="Email"
+          placeholder="Name"
           onChange={handlechange}/> 
         </div>
         <div className="Msg_red"> {errors.name}</div>
@@ -103,7 +105,7 @@ const Form = () => {
         
         <div className="Login_button_div">
           {/* <button className="Login_button">Save</button> */}
-          <Button  className="Login_button" text="Continue" />
+          <Button  className="Login_button" text="Save"  />
         </div>
         
       </form>

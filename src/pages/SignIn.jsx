@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CreateAccount from "../component/CreateAccount";
 import TextInput from "../component/TextInput";
 import Button from "../component/Button"
-import visibility from "../assets/Icon.svg"
 const SignIn = () => {
   const [emaildata, SetEmaildata] = useState({
     email: "",
@@ -44,7 +43,7 @@ const SignIn = () => {
             <label htmlFor="">Email Address</label>
             <TextInput className="Email_password_input" type="text" placeholder="Email" name="email" value={emaildata.email}
               onChange={handlechange}/>
-                        <Icon className="Icon-visibility" name="visibility" src={visibility}/>
+                       
 
             {/* <input
               className="Email_password_input"

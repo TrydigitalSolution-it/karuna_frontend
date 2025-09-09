@@ -15,10 +15,11 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route  element={<DashboardLayout />}>
           <Route path="usermanagement" element={<UserManagement />}/>
-            <Route path="userform" element={<UserForm />} />
+           
           
           <Route path="fitness" element={<Fitness />} />
         </Route>
+         <Route path="/userform" element={<UserForm />} />
       </Routes>
     </BrowserRouter>
   );

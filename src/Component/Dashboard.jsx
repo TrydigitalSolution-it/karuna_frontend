@@ -75,7 +75,7 @@ const Dashboard = () => {
         <div className="Password_div">
          
           <label htmlFor=""> Password</label>
-          <div className="">
+          <div className="password_icon">
           <TextInput
             className="Email_password_input"
             type="password"

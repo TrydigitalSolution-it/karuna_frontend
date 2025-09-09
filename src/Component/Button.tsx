@@ -5,12 +5,13 @@ interface ButtonProps{
   onClick:(event:React.MouseEvent<HTMLButtonElement>) =>void;
   type?: "submit" | "reset" | "button" | undefined;
   className: string;
+  buttonWrapper: string
   
 }
 
-const Button: React.FC<ButtonProps> = ({ text,type,onClick,className}) => {
+const Button: React.FC<ButtonProps> = ({ text,type,onClick,className,buttonWrapper}) => {
   return (
-    <div>
+    <div className={buttonWrapper}>
       <button  type={type} onClick={onClick} className={className}>{text}</button>
     </div>
   )

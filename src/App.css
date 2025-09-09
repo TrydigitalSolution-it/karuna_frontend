@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  max-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -42,6 +42,7 @@ body {
   width: 100%;
   max-width: 448px;
   box-sizing: border-box;
+  max-height: 100vh;
 }
 .main_form label{
   color: white;
@@ -156,9 +157,9 @@ flex-wrap: wrap;
   margin: 0;padding: 0;
   justify-content: space-evenly;
     display: flex
-;
+;width: 20vw;
     flex-direction: column;
-    flex-wrap: wrap;
+    
     
     height: 33vh;
 
@@ -171,11 +172,16 @@ flex-wrap: wrap;
       height: auto;
     width: 60px;
 }
+.nav_logo{
+  justify-content: center;
+    display: flex
+;
+}
 
 .nav_logo_text{
  margin-top: 29px;
     justify-content: space-evenly;
-    display: flex;
+    
 }
 .Nav_logo_text{
   font-family: poppins;
@@ -189,14 +195,18 @@ flex-wrap: wrap;
 }
 .Navbar{
  background-color: black;
-  border: 2px  solid#F66F1E;
+  
   height: 100vh;
-    width: 249px;
+    width: 20vw;
 
   }
   .nav_li{
-    border-bottom: 1px solid white;
+   
+   
 
+}
+.nav_li:hover{
+ background: #1F1F1F;
 }
 
 .user_main{
@@ -208,12 +218,13 @@ justify-content: center;
 }
 .Layout_main{
  display: flex;
-
+ 
 }
 .usermanagement{
-  border: 2px  solid;
-  height :100vh;
-  width: 80vw;
+ padding: 50px;
+ background: lightgray;
+ height: 84vh;
+    
 }
 
 .text_nav{
@@ -231,43 +242,105 @@ justify-content: center;
     justify-content: space-evenly;
 }
 
-.Icon_visibility{
+/* .Icon_visibility{
   width: 100px;
   height: auto;
-}
+} */
 .Icon_img{
-  align-items: center;
-    position: absolute;
-    justify-content: center;
-    display: flex
-;
-    right: 248px;
+ 
    
 }
-.Input_Text{
-  position: relative;
-    width: 402px;
-}
-.password_input{
-  display: flex
-;
-}
 .password_icon{
+  position: relative;
+ 
+}
+.Icon-visibility{
+ position: absolute;
+    top: 69%;
+    right: 492px;
+
+}
+.dashboard_layout{
+  height: 100vh;
+  width: 100vw;
+}
+.table-search-input{
+
+    padding: 15px;
+    width: 100%;
+    background: #151211;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    margin-top: 7px;
+}
+.search-input{
+  display: flex
+;margin-right: 13px;
+   justify-content: space-between;
+}
+.add-button{
+  margin-left: 12px;
+}
+.search-input-data{
   display: flex;
-  width: 403px;
+}
+.search-input h3{
+  font-family: 'Poppins';
+}
+.add-Data-Button{
+  margin-top: 7px;
+padding: 12px;
+    border-radius: 16px;
+    width: 10vw;
+    margin-bottom: 13px;
+    font-size: 17px;
+    border: none;
+    background-color: #f66f1e;
+    color: white;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+.usermanagementMain{
+  height: 100%;
+    width: 80vw;
 }
 @media (max-width: 500px) {
   .main_form {
     padding: 0px 16px;
+    border: 2px solid black;
+    padding: 32px 20px;
+    border-radius: 8px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    background: #15121182;
+    margin: auto;
+    width: 100%;
+    max-width: 448px;
+    box-sizing: border-box;
+    max-height: 100vh;
+  }
+  .main_div{
+    padding: 0px 16px
   }
 
+   .logo_div{
+    margin-top: 28px;
+   }
   .Login_button {
     padding: 12px;
     font-size: 15px;
+    width: 50%;
   }
 
   .LoginAdmin_Heading {
     font-size: 20px;
+    margin-bottom: 64px;
   }
 
   .img {
@@ -285,7 +358,70 @@ justify-content: center;
   .Email_password_input{
         margin-bottom: 6px;
   }
-  .Icon_img{
+  .Icon-visibility{
+    position: absolute;
+    top: 56%;
+    right: 35px;
+  }
+  .Navbar{
+    
+  }
+  .usermanagementMain{
+    width: 100vw;
+  }
+  .add-Data-Button{
+   margin-top: 0px;
+        padding: 3px;
+        border-radius: 11px;
+        width: 12vw;
+        margin-bottom: 2px;
+                font-size: 10px;
+        border: none;
+        background-color: #f66f1e;
+        color: white;
+        font-family: Lato, sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+  }
+  .table-search-input{
+    padding: 4px;
+    width: 100%;
+    font-size: 9px;
+    background: #151211;
+    border-radius: 14px;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+  .search-input{
+    margin-right: 0px;
+  }
+  .search-input h3{
+    margin: 0;
+    height: 6vw;
+    font-size: 12px;
+  }
+  .add-button{
+    margin-left: 3px;
+  }
+  .inputText{
+    width: 65px;
+  }
+  .nav_li:hover{
+ background: #1F1F1F;
+}
+.usermanagement{
+  height: 82vh;
+}
+}
 
+/*   */
+@media(min-width:500px){
+  .Icon-visibility{
+    position: absolute;
+        top: 56%;
+        right: 231px;
   }
 }
