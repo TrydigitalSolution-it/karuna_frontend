@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "../component/Icon"
-const TextInput = ({ name, type, value, className, placeholder, onChange,icon,inputWrapper }) => {
+const TextInput = ({ name, type, value, className, placeholder, onChange,inputWrapper }) => {
   return (
     <div className={inputWrapper}>
       <input

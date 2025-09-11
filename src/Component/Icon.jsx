@@ -1,5 +1,5 @@
 import React from 'react'
-const Icon = ({name,className,src}) => {
+const Icon = ({name,className,src,onClick}) => {
 
   return (
     <div className='Icon_img'>
@@ -7,6 +7,7 @@ const Icon = ({name,className,src}) => {
           src={src} 
           alt={name}
           className={className}
+          onClick={onClick}
         />
      
     </div>

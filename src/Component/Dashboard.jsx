@@ -12,6 +12,7 @@ const Dashboard = () => {
     email: "",
     password: "",
   });
+  const[showPassword,SetshowPassword]=useState(false)
   const [errors, Seterrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -78,14 +79,14 @@ const Dashboard = () => {
           <div className="password_icon">
           <TextInput
             className="Email_password_input"
-            type="password"
+            type={showPassword? "text": "password"}
             placeholder="Password"
             name="password"
             value={formdata.password}
             onChange={handlechange}
-            icon={visibility}
+            
           />
-          <Icon className="Icon-visibility" name="visibility" src={visibility}/>
+          <Icon className="Icon-visibility" name="visibility" src={visibility} onClick={()=>SetshowPassword(!showPassword)}/>
           </div> 
           
 
