@@ -1,4 +1,4 @@
-/* Header */
+
 .headerWrapper {
   background: #222;
   color: white;
@@ -35,7 +35,7 @@
   cursor: pointer;
 }
 
-/* Sidebar */
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -75,7 +75,7 @@
   background: #333;
 }
 
-/* Overlay behind sidebar */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -86,7 +86,7 @@
   z-index: 1099;
 }
 
-/* Report content */
+
 .report-container {
   margin-top: 60px; /* below header */
   padding: 20px;

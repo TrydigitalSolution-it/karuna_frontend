@@ -15,7 +15,7 @@ const Header = ({ setshowDashboard, showDashboard }) => {
           </div>
           <div className="Nav_logo_text">Admin Panel</div>
         </div>
-        <i className="fa-solid fa-bars fa-solid-bar-icon" onClick={handleClick}></i>
+       <div> <i className="fa-solid fa-bars fa-solid-bar-icon" onClick={handleClick}></i></div>
       </div>
     </header>
   );
