@@ -179,7 +179,7 @@ flex-wrap: wrap;
 }
 
 .nav_logo_text{
- margin-top: 29px;
+ margin-left: 21px;
     justify-content: space-evenly;
     
 }
@@ -308,6 +308,64 @@ padding: 12px;
   height: 100%;
     width: 80vw;
 }
+.fa-xmark {
+  position: absolute;
+    color: white;
+}
+.cancelAside{
+  position: relative;
+  justify-content: end;
+    display: flex
+;margin-right: 18px;
+    position: relative;
+}
+.sidebar-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1200;
+}
+.headerContainer{
+  /* border: 2px solid; */
+}
+.headerContainer header{
+    display: flex;
+    justify-content: space-between;
+        background: black;
+}
+.headerText{
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+    font-family: 'Poppins';
+    font-size: 22px;
+    align-items: center;
+    color: white;
+    margin-left: 12px;
+}
+.ActionContainer{
+  display: flex;
+
+}
+.ActionContainer .add-Data-Button{
+  width: 62px;
+  margin-top: 5px;
+  margin-right: 15px;
+    padding: 5px;
+    border-radius: 16px;
+    width: 10vw;
+    font-size: 16px;
+    font-size: 15px;
+}
+.reports{
+      margin-top: 22px;
+          border-radius: 7px;
+    border: 2px solid;
+}
+
 @media (max-width: 500px) {
   .main_form {
     padding: 0px 16px;
@@ -415,18 +473,44 @@ padding: 12px;
 .usermanagement{
   height: 82vh;
 }
+.headerText{
+    font-size: 12px;
+    
+  }
+  .ActionContainer .add-Data-Button{
+    font-size: 7px;
+    margin-top: 5px;
+    margin-right: 7px;
+    padding: 5px;
+  }
+  .modal{
+    width: 220px;
+    height: 195px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 65px;
+    
+    right: 0px;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 10px;
+  }
+  
 }
 
-/*   */
+
 @media(min-width:500px){
   .Icon-visibility{
     position: absolute;
         top: 56%;
         right: 231px;
   }
+  
 }
 
-/* Header */
+
 .headerWrapper {
   background: #222;
   color: white;
@@ -461,9 +545,12 @@ padding: 12px;
 .fa-solid-bar-icon {
   font-size: 22px;
   cursor: pointer;
+  top: 6px;
+    position: absolute;
+    left: 1px;
 }
 
-/* Sidebar */
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -471,7 +558,7 @@ padding: 12px;
   height: 100%;
   width: 240px;
   background: #111;
-  padding-top: 60px; /* below header */
+  padding-top: 60px; 
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 1100;
@@ -503,7 +590,7 @@ padding: 12px;
   background: #333;
 }
 
-/* Overlay behind sidebar */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -514,8 +601,62 @@ padding: 12px;
   z-index: 1099;
 }
 
-/* Report content */
+
 .report-container {
-  margin-top: 60px; /* below header */
+  margin-top: 60px; 
   padding: 20px;
 }
+
+.modal{
+  width: 450px;
+  height: 250px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+   top:70px;
+   /* z-index: 50; */
+  right: 400px;
+  padding: 30px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.reportContainer{
+  position: relative;
+  
+ 
+}
+
+.input{
+  width: 98%;
+  height: 30px;
+  border-radius:7px ;
+  /* cursor: pointer; */
+  margin-bottom:8px ;
+
+}
+
+.buttons{
+  width: 80%;
+  height: 30px;
+  border-radius:7px ;
+  /* cursor: pointer; */
+  margin-bottom:8px ;
+ cursor: pointer;
+ background-color: #f66f1e;
+ color: white;
+ border: none;
+ font-family: "poppins";
+ font-weight: 600;
+ 
+}
+.buttonContainer{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.edit-h2{
+  margin-top: 0;
+  text-align: center;
+}
+

@@ -11,12 +11,17 @@ const Sidebar = ({ show, onClose }) => {
     { name: "Settings", path: "/settings" },
     { name: "Logout", path: "/logout" },
   ];
+  const handleCancelClick=()=>{
+    onClose();
+  }
 
   return (
     <>
       {show && <div className="overlay" onClick={onClose}></div>}
       <aside className={`sidebar ${show ? "open" : ""}`}>
+          <div className="cancelAside"><i class="fa-solid fa-xmark" onClick={handleCancelClick}></i></div>
         <nav>
+          
           <ul className="sidebarMenu">
             {menuItems.map((item, index) => (
               <li key={index} className="sidebarMenu-li">
