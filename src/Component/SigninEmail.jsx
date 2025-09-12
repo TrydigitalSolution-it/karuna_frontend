@@ -2,9 +2,7 @@ import React from 'react'
 
 const SigninEmail = () => {
 
-  
   return (
-    
     <div className="main_div">
       <form action="" className="main_form" onSubmit={handleSubmit}>
         <div>

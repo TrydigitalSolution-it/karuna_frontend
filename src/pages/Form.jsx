@@ -1,25 +1,31 @@
-import React, { useState } from "react";
-import logo from "../assets/Icon.svg";
-import CreateAccount from "./CreateAccount";
-import TextInput from "../component/TextInput";
-import Button from "../component/Button";
-import visibility from "../assets/visibility.svg"
-import Icon from "../component/Icon.jsx";
-import react from "../assets/react.svg"
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import TextInput from '../component/TextInput';
+import Button from '../component/Button';
+import img from "../assets/Icon.svg";
 
-const Dashboard = () => {
-  const [formdata, Setformdata] = useState({
+
+const Form = () => {
+  
+    const navigate=useNavigate();
+    const [formdata, Setformdata] = useState({
+      name:"",
     email: "",
     password: "",
   });
-  const[showPassword,SetshowPassword]=useState(false)
   const [errors, Seterrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
     let newErrors = {};
+    const nameRegex=/^[A-Za-z\s]{2,50}$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+       if (!formdata.name) {
+      newErrors.name = "Name is required";
+    } else if (!nameRegex.test(formdata.name)) {
+      newErrors.name = "Enter a valid name ";
+    }
     if (!formdata.email) {
       newErrors.email = "Email is  required";
       // console.log(newErrors);
@@ -41,14 +47,16 @@ const Dashboard = () => {
         email: "",
         password: "",
       });
+      navigate("/usermanagement")
     }
+
+     
   };
   const handlechange = (e) => {
-    console.log("karuna");
     const { name, value } = e.target;
 
-    // console.log("key::" + name, "value::" + value);
-  
+    console.log("key::" + name, "value::" + value);
+
     Setformdata({ ...formdata, [name]: value });
   };
 
@@ -56,64 +64,53 @@ const Dashboard = () => {
     <div className="main_div">
       <form action="" className="main_form" onSubmit={handleSubmit}>
         <div>
-        <div className="logo_div"><img  className="img"src={logo} alt="logo" /> </div>
-
-          <div className="LoginAdmin_Heading">Sign In</div>
+          <div className="LoginAdmin_Heading">User Details</div>
         </div>
-
+        {/* <div className="logo_div"><img  className="img"src={Icon} alt="logo" /> </div> */}
+ <div className="Email_input_div">
+          <label htmlFor="">Name</label>
+        
+         <TextInput 
+           name="name"
+          type="text"
+          value={formdata.name}
+          className="Email_password_input"
+          placeholder="Name"
+          onChange={handlechange}/> 
+        </div>
+        <div className="Msg_red"> {errors.name}</div>
         <div className="Email_input_div">
-          <label htmlFor="">Email Address</label>
-           <TextInput 
+          <label htmlFor="">Email </label>
+        <TextInput 
            name="email"
           type="text"
           value={formdata.email}
           className="Email_password_input"
           placeholder="Email"
-          onChange={handlechange}/>     
-          
+          onChange={handlechange}/> 
         </div>
         <div className="Msg_red"> {errors.email}</div>
         <div className="Password_div">
-         
           <label htmlFor=""> Password</label>
-          <div className="password_icon">
-          <TextInput
+         <TextInput
             className="Email_password_input"
-            type={showPassword? "text": "password"}
+            type="password"
             placeholder="Password"
             name="password"
             value={formdata.password}
             onChange={handlechange}
-            
           />
-          <Icon className="Icon-visibility" name="visibility" src={visibility} onClick={()=>SetshowPassword(!showPassword)}/>
-          </div> 
-          
-
-
         </div>
         <div className="Msg_red"> {errors.password}</div>
-        <div className="remember_div">
-          <div className="Remember_div">
-            <input type="checkbox" />
-            <label className="label_Remember" htmlFor="Remember me">
-              {" "}
-              Remember Me
-            </label>
-          </div>
-          <a className="forgot_div" href="">
-            Forgot Password
-          </a>
-        </div>
+        
         <div className="Login_button_div">
-          {/* <button className="Login_button">Login</button> */}
-          <Button  className="Login_button" text="Login" />
-          
+          {/* <button className="Login_button">Save</button> */}
+          <Button  className="Login_button" text="Save"  />
         </div>
-        <CreateAccount />
+        
       </form>
     </div>
   );
-};
+}
 
-export default Dashboard;
+export default Form;

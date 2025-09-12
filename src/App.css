@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  max-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -27,6 +27,7 @@ body {
   margin-bottom: 64px;
   text-align: center;
   font-family: 'Poppins';
+  color: white;
 }
 
 .main_form {
@@ -41,6 +42,10 @@ body {
   width: 100%;
   max-width: 448px;
   box-sizing: border-box;
+  max-height: 100vh;
+}
+.main_form label{
+  color: white;
 }
 
 .Email_password_input {
@@ -152,9 +157,9 @@ flex-wrap: wrap;
   margin: 0;padding: 0;
   justify-content: space-evenly;
     display: flex
-;
+;width: 20vw;
     flex-direction: column;
-    flex-wrap: wrap;
+    
     
     height: 33vh;
 
@@ -167,11 +172,16 @@ flex-wrap: wrap;
       height: auto;
     width: 60px;
 }
+.nav_logo{
+  justify-content: center;
+    display: flex
+;
+}
 
 .nav_logo_text{
- margin-top: 29px;
+ margin-left: 21px;
     justify-content: space-evenly;
-    display: flex;
+    
 }
 .Nav_logo_text{
   font-family: poppins;
@@ -185,34 +195,210 @@ flex-wrap: wrap;
 }
 .Navbar{
  background-color: black;
-  border: 2px  solid#F66F1E;
+  
   height: 100vh;
-    width: 249px;
+    width: 20vw;
 
   }
   .nav_li{
-    border-bottom: 1px solid white;
+   
+   
 
+}
+.nav_li:hover{
+ background: #1F1F1F;
 }
 
 .user_main{
-border: 2px  solid black;
+justify-content: center;
+    display: flex
+;
+    height: 50vh;
+    border: 2px solid orange;
+}
+.Layout_main{
+ display: flex;
+ 
+}
+.usermanagement{
+ padding: 50px;
+ background: lightgray;
+ height: 84vh;
+    
 }
 
+.text_nav{
+      justify-content: space-between;
+    
+    display: flex
+;
+    
+    border: 2px solid orange;
+}
+.search_add_fields{
+  width: 252px;
+    display: flex
+;
+    justify-content: space-evenly;
+}
 
+/* .Icon_visibility{
+  width: 100px;
+  height: auto;
+} */
+.Icon_img{
+ 
+   
+}
+.password_icon{
+  position: relative;
+ 
+}
+.Icon-visibility{
+ position: absolute;
+    top: 69%;
+    right: 492px;
+
+}
+.dashboard_layout{
+  height: 100vh;
+  width: 100vw;
+}
+.table-search-input{
+
+    padding: 15px;
+    width: 100%;
+    background: #151211;
+    border-radius: 16px;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    margin-top: 7px;
+}
+.search-input{
+  display: flex
+;margin-right: 13px;
+   justify-content: space-between;
+}
+.add-button{
+  margin-left: 12px;
+}
+.search-input-data{
+  display: flex;
+}
+.search-input h3{
+  font-family: 'Poppins';
+}
+.add-Data-Button{
+  margin-top: 7px;
+padding: 12px;
+    border-radius: 16px;
+    width: 10vw;
+    margin-bottom: 13px;
+    font-size: 17px;
+    border: none;
+    background-color: #f66f1e;
+    color: white;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+.usermanagementMain{
+  height: 100%;
+    width: 80vw;
+}
+.fa-xmark {
+  position: absolute;
+    color: white;
+}
+.cancelAside{
+  position: relative;
+  justify-content: end;
+    display: flex
+;margin-right: 18px;
+    position: relative;
+}
+.sidebar-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1200;
+}
+.headerContainer{
+  /* border: 2px solid; */
+}
+.headerContainer header{
+    display: flex;
+    justify-content: space-between;
+        background: black;
+}
+.headerText{
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+    font-family: 'Poppins';
+    font-size: 22px;
+    align-items: center;
+    color: white;
+    margin-left: 12px;
+}
+.ActionContainer{
+  display: flex;
+
+}
+.ActionContainer .add-Data-Button{
+  width: 62px;
+  margin-top: 5px;
+  margin-right: 15px;
+    padding: 5px;
+    border-radius: 16px;
+    width: 10vw;
+    font-size: 16px;
+    font-size: 15px;
+}
+.reports{
+      margin-top: 22px;
+          border-radius: 7px;
+    border: 2px solid;
+}
 
 @media (max-width: 500px) {
   .main_form {
-    padding: 24px 16px;
+    padding: 0px 16px;
+    border: 2px solid black;
+    padding: 32px 20px;
+    border-radius: 8px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    background: #15121182;
+    margin: auto;
+    width: 100%;
+    max-width: 448px;
+    box-sizing: border-box;
+    max-height: 100vh;
+  }
+  .main_div{
+    padding: 0px 16px
   }
 
+   .logo_div{
+    margin-top: 28px;
+   }
   .Login_button {
     padding: 12px;
     font-size: 15px;
+    width: 50%;
   }
 
   .LoginAdmin_Heading {
     font-size: 20px;
+    margin-bottom: 64px;
   }
 
   .img {
@@ -230,4 +416,247 @@ border: 2px  solid black;
   .Email_password_input{
         margin-bottom: 6px;
   }
+  .Icon-visibility{
+    position: absolute;
+    top: 56%;
+    right: 35px;
+  }
+  .Navbar{
+    
+  }
+  .usermanagementMain{
+    width: 100vw;
+  }
+  .add-Data-Button{
+   margin-top: 0px;
+        padding: 3px;
+        border-radius: 11px;
+        width: 12vw;
+        margin-bottom: 2px;
+                font-size: 10px;
+        border: none;
+        background-color: #f66f1e;
+        color: white;
+        font-family: Lato, sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+  }
+  .table-search-input{
+    padding: 4px;
+    width: 100%;
+    font-size: 9px;
+    background: #151211;
+    border-radius: 14px;
+    border: none;
+    color: #ffffff;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+  .search-input{
+    margin-right: 0px;
+  }
+  .search-input h3{
+    margin: 0;
+    height: 6vw;
+    font-size: 12px;
+  }
+  .add-button{
+    margin-left: 3px;
+  }
+  .inputText{
+    width: 65px;
+  }
+  .nav_li:hover{
+ background: #1F1F1F;
 }
+.usermanagement{
+  height: 82vh;
+}
+.headerText{
+    font-size: 12px;
+    
+  }
+  .ActionContainer .add-Data-Button{
+    font-size: 7px;
+    margin-top: 5px;
+    margin-right: 7px;
+    padding: 5px;
+  }
+  .modal{
+    width: 220px;
+    height: 195px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 65px;
+    
+    right: 0px;
+    padding: 30px;
+    background-color: gray;
+    border-radius: 10px;
+  }
+  
+}
+
+
+@media(min-width:500px){
+  .Icon-visibility{
+    position: absolute;
+        top: 56%;
+        right: 231px;
+  }
+  
+}
+
+
+.headerWrapper {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav_logo_text {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.fa-solid-bar-icon {
+  font-size: 22px;
+  cursor: pointer;
+  top: 6px;
+    position: absolute;
+    left: 1px;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background: #111;
+  padding-top: 60px; 
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarMenu-li {
+  margin: 15px 0;
+}
+
+.sidebarMenu-li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebarMenu-li a:hover {
+  background: #333;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1099;
+}
+
+
+.report-container {
+  margin-top: 60px; 
+  padding: 20px;
+}
+
+.modal{
+  width: 450px;
+  height: 250px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: absolute;
+   top:70px;
+   /* z-index: 50; */
+  right: 400px;
+  padding: 30px;
+  background-color: gray;
+  border-radius: 10px;
+}
+.reportContainer{
+  position: relative;
+  
+ 
+}
+
+.input{
+  width: 98%;
+  height: 30px;
+  border-radius:7px ;
+  /* cursor: pointer; */
+  margin-bottom:8px ;
+
+}
+
+.buttons{
+  width: 80%;
+  height: 30px;
+  border-radius:7px ;
+  /* cursor: pointer; */
+  margin-bottom:8px ;
+ cursor: pointer;
+ background-color: #f66f1e;
+ color: white;
+ border: none;
+ font-family: "poppins";
+ font-weight: 600;
+ 
+}
+.buttonContainer{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.edit-h2{
+  margin-top: 0;
+  text-align: center;
+}
+

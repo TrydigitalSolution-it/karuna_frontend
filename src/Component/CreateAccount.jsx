@@ -7,12 +7,12 @@ const CreateAccount = () => {
       <div className="create-account__text">
         Don't have an Account? <span>Create Account</span>{" "}
       </div>
-      <div className="create-account__separator"> or</div>
-      <div className="create-account__socials">
+      {/* <div className="create-account__separator"> or</div> */}
+      {/* <div className="create-account__socials">
        
         <div className="socials_google"><img src={Google} alt="" /></div>
         <div className="socials_Apple"><img src={Apple} alt="" /></div>
-      </div>
+      </div> */}
     </div>
   );
 };

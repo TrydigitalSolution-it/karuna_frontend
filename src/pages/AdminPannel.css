@@ -1,0 +1,93 @@
+
+.headerWrapper {
+  background: #222;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav_logo_text {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.fa-solid-bar-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background: #111;
+  padding-top: 60px; /* below header */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarMenu-li {
+  margin: 15px 0;
+}
+
+.sidebarMenu-li a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebarMenu-li a:hover {
+  background: #333;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 1099;
+}
+
+
+.report-container {
+  margin-top: 60px; /* below header */
+  padding: 20px;
+}

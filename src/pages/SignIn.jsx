@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import CreateAccount from "../Component/CreateAccount";
-
+import CreateAccount from "../component/CreateAccount";
+import TextInput from "../component/TextInput";
+import Button from "../component/Button"
 const SignIn = () => {
   const [emaildata, SetEmaildata] = useState({
     email: "",
@@ -40,18 +41,23 @@ const SignIn = () => {
           </div>
           <div className="Email_input_div">
             <label htmlFor="">Email Address</label>
-            <input
+            <TextInput className="Email_password_input" type="text" placeholder="Email" name="email" value={emaildata.email}
+              onChange={handlechange}/>
+                       
+
+            {/* <input
               className="Email_password_input"
               type="text"
               placeholder="Email"
               name="email"
               value={emaildata.email}
               onChange={handlechange}
-            />
+            /> */}
           </div>
           <div className="Msg_red"> {error.email} </div>
           <div className="Login_button_div">
-            <button className="Login_button">Continue</button>
+            {/* <button className="Login_button">Continue</button> */}
+            <Button className="Login_button"  text="Continue"/>
           </div>
           <CreateAccount/>
         </form>
